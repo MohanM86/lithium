@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lithium.no — Norges største kunnskapsbase om Litium</title>
+<meta name="description" content="Alt du trenger å vite om litium: batteriteknologi, forekomster, utvinning, elbiler og medisinsk bruk. Uavhengig kunnskapsplattform.">
+<meta property="og:title" content="Lithium.no — Norges største kunnskapsbase om Litium">
+<meta property="og:description" content="Evidensbasert kunnskap om grunnstoff 3 — litium.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lithium.no">
+<link rel="canonical" href="https://lithium.no">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+--d:#08060e;--d2:#0d0a16;--d3:#12101e;--pp:#1a1530;--p8:#2a2050;--p7:#3a2d70;--p6:#4e3c96;
+--p5:#6350b8;--p4:#7b68d6;--p3:#9580f0;--p2:#b8a8ff;--p1:#d5ccff;--lav:#ece8ff;--ghost:#f5f3ff;--w:#fff;
+--cy:#00d4ff;--cyg:rgba(0,212,255,.3);--el:#7b68d6;
+--gb:rgba(255,255,255,.04);--gbr:rgba(255,255,255,.07);
+--td:#08060e;--tm:#4a4560;--tl:#6a6580;--tw:rgba(255,255,255,.93);--tw6:rgba(255,255,255,.6);--tw4:rgba(255,255,255,.35);
+--fh:'Plus Jakarta Sans',system-ui,sans-serif;--fd:'Fraunces',Georgia,serif;--fm:'IBM Plex Mono',monospace;--fb:'Plus Jakarta Sans',system-ui,sans-serif;
+--eo:cubic-bezier(.16,1,.3,1)
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px;overflow-x:hidden}
+body{font-family:var(--fb);color:var(--td);background:var(--ghost);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--p3);color:var(--d)}
+.ctn{max-width:1280px;margin:0 auto;padding:0 clamp(1.5rem,5vw,3rem)}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.2rem 0;transition:all .5s var(--eo)}
+.nav.s{background:rgba(8,6,14,.92);backdrop-filter:blur(40px) saturate(1.5);-webkit-backdrop-filter:blur(40px) saturate(1.5);padding:.6rem 0;box-shadow:0 1px 0 rgba(0,212,255,.04)}
+.nav__i{display:flex;align-items:center;justify-content:space-between}
+.nav__l{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:#fff;font-weight:700;font-size:1.15rem;letter-spacing:-.02em}
+.nav__lm{width:34px;height:34px;background:linear-gradient(135deg,var(--p3),var(--cy));border-radius:10px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 14px var(--cyg);position:relative}
+.nav__lm svg{width:18px;height:18px}
+.nav__k{display:flex;list-style:none;gap:2rem;align-items:center}
+.nav__k a{color:var(--tw4);text-decoration:none;font-size:.8rem;font-weight:500;transition:color .3s}
+.nav__k a:hover{color:var(--cy)}
+.nav__h{display:none;background:0;border:0;cursor:pointer;width:30px;height:30px;position:relative}
+.nav__h span{position:absolute;left:3px;width:24px;height:1.5px;background:#fff;transition:all .3s var(--eo)}
+.nav__h span:nth-child(1){top:9px}.nav__h span:nth-child(2){top:15px}.nav__h span:nth-child(3){top:21px}
+.nav__h.o span:nth-child(1){top:15px;transform:rotate(45deg)}.nav__h.o span:nth-child(2){opacity:0}.nav__h.o span:nth-child(3){top:15px;transform:rotate(-45deg)}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;text-align:center;background:var(--d)}
+.hero__bg{position:absolute;inset:0}
+.hero__mesh{position:absolute;inset:0;background:radial-gradient(ellipse 55% 45% at 50% 35%,rgba(0,212,255,.06),transparent 70%),radial-gradient(ellipse 40% 35% at 65% 65%,rgba(149,128,240,.05),transparent 55%)}
+.hero__grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,212,255,.015) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,.015) 1px,transparent 1px);background-size:80px 80px}
+.hero__orb{position:absolute;border-radius:50%;filter:blur(120px);animation:orbF 25s ease-in-out infinite}
+.hero__orb--a{width:500px;height:500px;background:radial-gradient(circle,rgba(0,212,255,.08),transparent 70%);top:-5%;left:25%}
+.hero__orb--b{width:400px;height:400px;background:radial-gradient(circle,rgba(149,128,240,.06),transparent 70%);bottom:5%;right:10%;animation-delay:-9s}
+@keyframes orbF{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(35px,-20px) scale(1.05)}66%{transform:translate(-25px,18px) scale(.95)}}
+.hero__c{position:relative;z-index:2;max-width:900px;padding:10rem 2rem 8rem}
+.hero__ey{display:inline-flex;align-items:center;gap:.7rem;font-family:var(--fm);font-size:.65rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--p3);margin-bottom:2.5rem;opacity:0;animation:hUp 1s var(--eo) .2s forwards}
+.hero__el{width:28px;height:1px;background:var(--p4)}
+.hero__t{font-family:var(--fh);font-weight:800;font-size:clamp(3.2rem,7.5vw,7rem);line-height:.95;letter-spacing:-.05em;color:#fff;margin-bottom:1.5rem;opacity:0;animation:hUp 1s var(--eo) .4s forwards}
+.hero__ta{background:linear-gradient(135deg,var(--p2),var(--cy));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero__el3{font-family:var(--fm);font-size:clamp(.85rem,1.5vw,1.05rem);color:var(--p4);display:block;margin-bottom:.8rem;font-weight:400;letter-spacing:.15em;opacity:0;animation:hUp 1s var(--eo) .3s forwards}
+.hero__p{font-family:var(--fd);font-size:clamp(1.05rem,2vw,1.3rem);font-weight:400;color:var(--tw6);max-width:600px;margin:0 auto 3rem;line-height:1.75;font-style:italic;opacity:0;animation:hUp 1s var(--eo) .55s forwards}
+.hero__btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;opacity:0;animation:hUp 1s var(--eo) .7s forwards}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.95rem 2.4rem;border-radius:100px;font-family:var(--fh);font-size:.88rem;font-weight:600;text-decoration:none;transition:all .4s var(--eo);cursor:pointer;border:0}
+.btn svg{width:15px;height:15px;transition:transform .3s}.btn:hover svg{transform:translateX(3px)}
+.btn--c{background:linear-gradient(135deg,var(--p4),var(--cy));color:var(--d)}.btn--c:hover{transform:translateY(-2px);box-shadow:0 8px 40px var(--cyg)}
+.btn--o{background:0;color:#fff;border:1px solid var(--tw4)}.btn--o:hover{background:var(--gb);border-color:var(--p4);transform:translateY(-2px)}
+.hero__scroll{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:.5rem;opacity:0;animation:hUp 1s var(--eo) 1.2s forwards}
+.hero__scroll span{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--tw4)}
+.hero__sl{width:1px;height:44px;position:relative;overflow:hidden;background:rgba(255,255,255,.06)}
+.hero__sl::after{content:'';position:absolute;top:-44px;left:0;width:1px;height:44px;background:linear-gradient(to bottom,transparent,var(--cy));animation:scrl 2.2s ease-in-out infinite}
+@keyframes scrl{0%{top:-44px}50%,100%{top:44px}}
+@keyframes hUp{from{opacity:0;transform:translateY(45px)}to{opacity:1;transform:translateY(0)}}
+
+/* STATS */
+.stbar{background:var(--d2);border-bottom:1px solid rgba(0,212,255,.04);padding:1.6rem 0}
+.stbar__i{display:flex;justify-content:center;gap:clamp(2rem,5vw,4.5rem);flex-wrap:wrap;align-items:center}
+.stp{display:flex;align-items:center;gap:.7rem}
+.stp__n{font-family:var(--fh);font-weight:800;font-size:1.7rem;letter-spacing:-.03em;color:var(--cy)}
+.stp__l{font-size:.78rem;color:var(--tw4);line-height:1.3}
+.stp__d{width:1px;height:36px;background:rgba(255,255,255,.06)}
+
+/* SECTIONS */
+.sec{padding:clamp(5rem,10vw,9rem) 0;position:relative}
+.sec--s{background:var(--lav)}.sec--d{background:var(--d);color:var(--tw)}.sec--g{background:linear-gradient(180deg,var(--d),var(--d2));color:var(--tw)}.sec--warm{background:linear-gradient(180deg,var(--lav),var(--ghost))}
+.sec__lb{font-family:var(--fm);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--p6);font-weight:500;margin-bottom:1rem}
+.sec--d .sec__lb,.sec--g .sec__lb{color:var(--p3)}
+.sec__hd{font-family:var(--fh);font-weight:800;font-size:clamp(2.4rem,5vw,4rem);letter-spacing:-.04em;line-height:1.06;margin-bottom:1.2rem}
+.sec__hd em{font-family:var(--fd);font-weight:400;font-style:italic}
+.sec__ds{font-family:var(--fd);font-size:1.08rem;font-weight:400;color:var(--tm);max-width:640px;line-height:1.8;font-style:italic}
+.sec--d .sec__ds,.sec--g .sec__ds{color:var(--tw6)}
+.sec__top{margin-bottom:clamp(3rem,5vw,5rem)}.sec__top--c{text-align:center;display:flex;flex-direction:column;align-items:center}
+
+/* REVEAL */
+.r{opacity:0;transform:translateY(50px);transition:opacity .9s var(--eo),transform .9s var(--eo)}
+.r.v{opacity:1;transform:translateY(0)}.rd1{transition-delay:.1s}.rd2{transition-delay:.2s}.rd3{transition-delay:.3s}.rd4{transition-delay:.4s}
+
+/* CARDS */
+.hw-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;counter-reset:hw}
+.hw{background:var(--w);border-radius:20px;padding:2rem;border:1px solid rgba(0,0,0,.04);position:relative;counter-increment:hw;transition:all .4s var(--eo)}
+.hw:hover{transform:translateY(-5px);box-shadow:0 20px 60px -15px rgba(8,6,14,.1)}
+.hw::before{content:counter(hw,decimal-leading-zero);font-family:var(--fh);font-weight:800;font-size:3rem;line-height:1;color:rgba(0,212,255,.05);position:absolute;top:1.2rem;right:1.5rem}
+.hw__ic{width:44px;height:44px;border-radius:12px;background:rgba(0,212,255,.06);display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
+.hw__ic svg{width:22px;height:22px;color:var(--p5)}
+.hw__tt{font-family:var(--fh);font-weight:700;font-size:1rem;margin-bottom:.4rem}
+.hw__tx{font-size:.85rem;color:var(--tm);line-height:1.7;font-weight:300}
+
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,5vw,6rem);align-items:center}
+.intro__vis{position:relative;background:linear-gradient(160deg,var(--lav),var(--w));border-radius:28px;padding:3rem;border:1px solid rgba(0,0,0,.04);display:flex;align-items:center;justify-content:center;min-height:440px;overflow:hidden}
+.intro__vis::before{content:'';position:absolute;inset:0;border-radius:28px;background:radial-gradient(circle at 50% 30%,rgba(0,212,255,.04),transparent 60%)}
+.intro__bd p{font-size:1.02rem;color:var(--tm);margin-bottom:1.2rem;font-weight:300;line-height:1.85}
+.intro__bd p:first-of-type::first-letter{font-family:var(--fd);font-size:4rem;float:left;line-height:.82;margin-right:.5rem;color:var(--p5)}
+.cbox{background:linear-gradient(135deg,var(--d),var(--d2));border-radius:16px;padding:1.8rem 2rem;display:flex;align-items:flex-start;gap:1.2rem;margin-top:2rem;border:1px solid rgba(0,212,255,.06)}
+.cbox__ic{flex-shrink:0;width:44px;height:44px;background:rgba(0,212,255,.08);border-radius:12px;display:flex;align-items:center;justify-content:center}
+.cbox__ic svg{width:22px;height:22px}
+.cbox__lb{font-family:var(--fm);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--cy);font-weight:500;margin-bottom:.35rem}
+.cbox__tx{color:var(--tw6);font-size:.9rem;line-height:1.75;font-weight:300}
+
+.trow{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.tc{background:var(--w);border-radius:24px;padding:2.4rem;border:1px solid rgba(0,0,0,.04);transition:all .5s var(--eo);overflow:hidden;position:relative}
+.tc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--p3),var(--cy));transform:scaleX(0);transform-origin:left;transition:transform .5s var(--eo)}
+.tc:hover{transform:translateY(-8px);box-shadow:0 30px 80px -20px rgba(8,6,14,.12)}.tc:hover::before{transform:scaleX(1)}
+.tc__ic{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:1.3rem}
+.tc__ic svg{width:26px;height:26px}
+.tc__ic--a{background:rgba(0,212,255,.06)}.tc__ic--a svg{color:var(--cy)}
+.tc__ic--b{background:rgba(149,128,240,.06)}.tc__ic--b svg{color:var(--p3)}
+.tc__ic--c{background:rgba(123,104,214,.06)}.tc__ic--c svg{color:var(--el)}
+.tc__nm{font-family:var(--fh);font-weight:700;font-size:1.4rem;margin-bottom:.2rem}
+.tc__fl{font-family:var(--fd);font-style:italic;font-size:.85rem;color:var(--tl);margin-bottom:1rem}
+.tc__p{font-size:.9rem;color:var(--tm);line-height:1.8;font-weight:300}
+
+.bwrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.bc{background:var(--gb);border:1px solid var(--gbr);border-radius:20px;padding:2.2rem;transition:all .5s var(--eo);position:relative;overflow:hidden}
+.bc:hover{background:rgba(255,255,255,.06);border-color:rgba(0,212,255,.12);transform:translateY(-5px)}
+.bc__ic{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:1.3rem}
+.bc__ic svg{width:26px;height:26px}
+.bc__ic--a{background:rgba(0,212,255,.08)}.bc__ic--a svg{color:var(--cy)}
+.bc__ic--b{background:rgba(149,128,240,.08)}.bc__ic--b svg{color:var(--p3)}
+.bc__ic--c{background:rgba(100,200,150,.08)}.bc__ic--c svg{color:#64c896}
+.bc__ic--d{background:rgba(255,180,100,.08)}.bc__ic--d svg{color:#ffb464}
+.bc__ic--e{background:rgba(200,100,120,.08)}.bc__ic--e svg{color:#c86478}
+.bc__ic--f{background:rgba(100,180,220,.08)}.bc__ic--f svg{color:#64b4dc}
+.bc__tt{font-family:var(--fh);font-weight:600;font-size:1.12rem;color:#fff;margin-bottom:.5rem}
+.bc__tx{font-size:.88rem;color:var(--tw6);line-height:1.8;font-weight:300}
+
+.bnb{background:var(--d);padding:clamp(3rem,6vw,5rem) 0;position:relative}
+.bnb::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(0,212,255,.03),transparent)}
+.bnb__row{display:grid;grid-template-columns:repeat(2,1fr);gap:3rem 5rem;justify-items:center}
+.bn{text-align:center}.bn__n{font-family:var(--fh);font-weight:800;font-size:clamp(2.5rem,5vw,4.5rem);letter-spacing:-.04em;background:linear-gradient(135deg,var(--p2),var(--cy));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
+.bn__l{font-size:.78rem;color:var(--tw4);margin-top:.3rem;max-width:160px}
+
+.sgrid{display:grid;grid-template-columns:1.3fr .7fr;gap:4rem;align-items:start}
+.stbl{width:100%;border-collapse:separate;border-spacing:0}
+.stbl thead th{text-align:left;padding:0 .5rem 1rem;font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tl);font-weight:500;border-bottom:2px solid rgba(0,0,0,.05)}
+.stbl tbody tr{transition:background .2s}.stbl tbody tr:hover{background:var(--lav)}
+.stbl td{padding:.9rem .5rem;border-bottom:1px solid rgba(0,0,0,.03);font-size:.9rem;color:var(--tm);font-weight:300}
+.stbl td:first-child{font-weight:500;color:var(--td)}
+.bar{width:100%;height:5px;background:rgba(0,0,0,.03);border-radius:3px;overflow:hidden}
+.bar__f{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--p6),var(--cy));transition:width 1.4s var(--eo);width:0}
+.ssb{position:sticky;top:7rem;display:flex;flex-direction:column;gap:1.5rem}
+.stip{border-radius:18px;padding:2rem;border:1px solid rgba(0,0,0,.04);background:var(--w)}
+.stip__ic{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
+.stip__ic svg{width:20px;height:20px}
+.stip__ic--a{background:rgba(0,212,255,.06)}.stip__ic--a svg{color:var(--cy)}
+.stip__ic--b{background:rgba(200,100,120,.06)}.stip__ic--b svg{color:#c86478}
+
+.dgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem}
+.dc{background:var(--w);border-radius:24px;padding:2.5rem;border:1px solid rgba(0,0,0,.04);transition:all .4s var(--eo)}
+.dc:hover{transform:translateY(-5px);box-shadow:0 20px 60px -15px rgba(8,6,14,.1)}
+.dc__ic{width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,var(--lav),var(--w));border:1px solid rgba(0,0,0,.03);display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem}
+.dc__ic svg{width:24px;height:24px;color:var(--p5)}
+.dc__grp{font-family:var(--fh);font-weight:700;font-size:1.15rem;margin-bottom:.15rem}
+.dc__age{font-size:.8rem;color:var(--tl);margin-bottom:1.2rem}
+.dc__amt{font-family:var(--fh);font-weight:800;font-size:2.4rem;letter-spacing:-.04em;background:linear-gradient(135deg,var(--p6),var(--cy));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1}
+.dc__u{font-size:.8rem;-webkit-text-fill-color:var(--tl)}
+.dc__dt{font-size:.86rem;color:var(--tm);margin-top:.8rem;line-height:1.75;font-weight:300}
+
+.tl{max-width:820px;margin:0 auto;position:relative;padding-left:3rem}
+.tl::before{content:'';position:absolute;left:11px;top:0;bottom:0;width:1px;background:rgba(0,212,255,.08)}
+.tli{position:relative;margin-bottom:3.2rem}
+.tli::before{content:'';position:absolute;left:-3rem;top:8px;width:9px;height:9px;border-radius:50%;background:var(--cy);box-shadow:0 0 0 4px rgba(0,212,255,.12),0 0 20px rgba(0,212,255,.15);margin-left:7px}
+.tli__y{font-family:var(--fm);font-size:.75rem;color:var(--cy);margin-bottom:.25rem;font-weight:500}
+.tli__tt{font-family:var(--fh);font-weight:600;font-size:1.12rem;color:#fff;margin-bottom:.4rem}
+.tli__tx{font-size:.88rem;color:var(--tw6);line-height:1.8;font-weight:300}
+
+.mlist{max-width:820px;margin:0 auto}
+.mi{border-bottom:1px solid rgba(0,0,0,.05)}.mi:first-child{border-top:1px solid rgba(0,0,0,.05)}
+.mi__tg{display:flex;align-items:center;gap:1.1rem;width:100%;background:0;border:0;cursor:pointer;text-align:left;padding:1.8rem 0;font-family:var(--fb)}
+.mi__bd{flex-shrink:0;font-family:var(--fm);font-size:.6rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.2rem .6rem;border-radius:4px;background:#c86450;color:#fff}
+.mi__q{flex:1;font-family:var(--fh);font-weight:600;font-size:1.05rem;color:var(--td)}
+.mi__ch{flex-shrink:0;width:18px;height:18px;color:var(--tl);transition:transform .4s var(--eo)}.mi.o .mi__ch{transform:rotate(180deg)}
+.mi__an{max-height:0;overflow:hidden;transition:max-height .5s var(--eo)}.mi.o .mi__an{max-height:500px;padding-bottom:1.8rem}
+.mi__ai{padding-left:calc(.6rem*2 + 1.1rem + 2.5rem)}
+.mi__fb{display:inline-block;font-family:var(--fm);font-size:.6rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.2rem .6rem;border-radius:4px;background:#64c896;color:#fff;margin-bottom:.5rem}
+.mi__at{font-size:.9rem;color:var(--tm);line-height:1.8;font-weight:300}
+
+.fgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;max-width:1000px;margin:0 auto}
+.fq{background:var(--w);border-radius:16px;padding:1.8rem;border:1px solid rgba(0,0,0,.04);transition:all .3s var(--eo)}
+.fq:hover{transform:translateY(-3px);box-shadow:0 12px 35px -10px rgba(8,6,14,.08)}
+.fq__q{font-family:var(--fh);font-weight:600;font-size:.96rem;margin-bottom:.5rem}
+.fq__a{font-size:.86rem;color:var(--tm);line-height:1.8;font-weight:300}
+
+/* FOOTER */
+.ft{background:var(--d);position:relative;overflow:hidden}
+.ft__glow{position:absolute;top:0;left:50%;transform:translateX(-50%);width:800px;height:400px;background:radial-gradient(ellipse,rgba(0,212,255,.03),transparent 70%);pointer-events:none}
+.ft__top{padding:5rem 0 3rem;border-bottom:1px solid rgba(255,255,255,.04);display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:3rem;position:relative}
+.ft__brand{max-width:320px}
+.ft__bt{font-size:.85rem;color:var(--tw4);line-height:1.8;font-weight:300;margin-bottom:1.5rem}
+.ft__itfirma{display:inline-flex;align-items:center;gap:.6rem;padding:.6rem 1.2rem;border-radius:10px;background:rgba(0,212,255,.04);border:1px solid rgba(0,212,255,.08);text-decoration:none;transition:all .4s var(--eo)}
+.ft__itfirma:hover{background:rgba(0,212,255,.08);border-color:rgba(0,212,255,.15);transform:translateY(-2px)}
+.ft__itfirma-badge{font-family:var(--fm);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--cy);font-weight:500}
+.ft__itfirma-name{font-family:var(--fh);font-weight:700;font-size:.95rem;color:#fff}
+.ft__itfirma-arrow{width:14px;height:14px;color:var(--cy);margin-left:.3rem;transition:transform .3s}.ft__itfirma:hover .ft__itfirma-arrow{transform:translateX(3px)}
+.ft__c h4{font-family:var(--fm);font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--tw4);font-weight:500;margin-bottom:1.2rem}
+.ft__c a{display:flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.35);text-decoration:none;font-size:.88rem;margin-bottom:.7rem;font-weight:300;transition:all .3s var(--eo)}.ft__c a:hover{color:var(--cy);transform:translateX(4px)}
+.ft__c a svg{width:14px;height:14px;opacity:.3}.ft__c a:hover svg{opacity:.7}
+.ft__mid{padding:2.5rem 0;border-bottom:1px solid rgba(255,255,255,.04);display:flex;justify-content:center;gap:2rem;flex-wrap:wrap}
+.ft__badge{display:flex;align-items:center;gap:.8rem;padding:.8rem 1.5rem;border-radius:12px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04)}
+.ft__badge-ic{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center}
+.ft__badge-ic svg{width:18px;height:18px}
+.ft__badge-ic--a{background:rgba(100,200,150,.08)}.ft__badge-ic--a svg{color:#64c896}
+.ft__badge-ic--b{background:rgba(180,140,220,.08)}.ft__badge-ic--b svg{color:#b48cdc}
+.ft__badge-ic--c{background:rgba(0,212,255,.08)}.ft__badge-ic--c svg{color:var(--cy)}
+.ft__badge-tx{font-size:.78rem;color:var(--tw4);line-height:1.3}.ft__badge-tx strong{display:block;color:var(--tw6);font-weight:500;font-size:.82rem}
+.ft__bot{padding:2rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.ft__cp{font-size:.75rem;color:rgba(255,255,255,.25)}.ft__cp a{color:var(--cy);text-decoration:none;font-weight:500}
+.ft__dis{font-size:.68rem;color:rgba(255,255,255,.15);max-width:450px;text-align:right;line-height:1.6}
+
+.btt{position:fixed;bottom:2rem;right:2rem;width:46px;height:46px;border-radius:50%;background:var(--p5);color:#fff;border:0;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all .4s var(--eo);z-index:999;box-shadow:0 4px 24px var(--cyg)}
+.btt.vi{opacity:1;visibility:visible}.btt:hover{transform:translateY(-3px);background:var(--cy);color:var(--d)}.btt svg{width:16px;height:16px}
+
+@media(max-width:1024px){.bwrap{grid-template-columns:repeat(2,1fr)}.hw-grid,.trow{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.nav__k{display:none}.nav__h{display:block}.nav__k.op{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(8,6,14,.97);backdrop-filter:blur(30px);padding:2rem 1.5rem;gap:1.2rem}.intro,.trow{grid-template-columns:1fr}.bwrap,.sgrid,.dgrid,.fgrid,.hw-grid{grid-template-columns:1fr}.ft__top{grid-template-columns:1fr 1fr}.hero__btns{flex-direction:column;align-items:center}.bnb__row{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav"><div class="ctn"><div class="nav__i">
+<a href="#" class="nav__l"><div class="nav__lm"><svg viewBox="0 0 20 20" fill="none" stroke="#08060e" stroke-width="1.5" stroke-linecap="round"><rect x="5" y="7" width="10" height="6" rx="1"/><path d="M15 9h1.5v2H15M7 7V5M13 7V5"/></svg></div>Lithium.no</a>
+<ul class="nav__k" id="nk"><li><a href="#hva-er">Hva er litium</a></li><li><a href="#batterier">Batterier</a></li><li><a href="#forekomster">Forekomster</a></li><li><a href="#utvinning">Utvinning</a></li><li><a href="#elbiler">Elbiler</a></li><li><a href="#forskning">Forskning</a></li><li><a href="#myter">Myter</a></li><li><a href="#faq">FAQ</a></li></ul>
+<button class="nav__h" id="hb" aria-label="Meny"><span></span><span></span><span></span></button>
+</div></div></nav>
+
+<section class="hero" id="topp"><div class="hero__bg"><div class="hero__mesh"></div><div class="hero__grid"></div><div class="hero__orb hero__orb--a"></div><div class="hero__orb hero__orb--b"></div></div>
+<div class="hero__c">
+<div class="hero__ey"><span class="hero__el"></span>Norges fremste kunnskapsplattform<span class="hero__el"></span></div>
+<span class="hero__el3">&#x26A1; Grunnstoff 3 &mdash; Li</span>
+<h1 class="hero__t">Liti<span class="hero__ta">um</span></h1>
+<p class="hero__p">Fra salar-orkenens hvite gull til verdens mest avanserte batterier. Grunnstoffet som driver den elektriske revolusjonen.</p>
+<div class="hero__btns"><a href="#hva-er" class="btn btn--c">Utforsk plattformen <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a><a href="#batterier" class="btn btn--o">Batteriteknologi</a></div>
+</div><div class="hero__scroll"><span>Scroll</span><div class="hero__sl"></div></div></section>
+
+<div class="stbar"><div class="ctn"><div class="stbar__i">
+<div class="stp"><div class="stp__n">3</div><div class="stp__l">Atomnummer &mdash;<br>letteste metallet</div></div><div class="stp__d"></div>
+<div class="stp"><div class="stp__n">80%</div><div class="stp__l">Brukes i<br>batteriproduksjon</div></div><div class="stp__d"></div>
+<div class="stp"><div class="stp__n">130 Mt</div><div class="stp__l">Globale<br>reserver (tonn)</div></div><div class="stp__d"></div>
+<div class="stp"><div class="stp__n">3x</div><div class="stp__l">Ettersporselvekst<br>innen 2030</div></div>
+</div></div></div>
+
+<!-- HOW BATTERIES WORK -->
+<section class="sec sec--warm" id="mekanisme"><div class="ctn">
+<div class="sec__top sec__top--c r"><div class="sec__lb">Elektrokjemi</div><h2 class="sec__hd">Slik fungerer et <em>litium-ion-batteri</em></h2><p class="sec__ds">Litiumioner vandrer mellom to elektroder gjennom en elektrolytt &mdash; en elegant dans av ladning og utladning.</p></div>
+<div class="hw-grid">
+<div class="hw r"><div class="hw__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8"/></svg></div><h3 class="hw__tt">Lading</h3><p class="hw__tx">Ekstern strom tvinger Li+-ioner fra katoden (positiv) gjennom elektrolytten til anoden (negativ). Energi lagres som kjemisk potensial.</p></div>
+<div class="hw r rd1"><div class="hw__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg></div><h3 class="hw__tt">Lagring</h3><p class="hw__tx">Litiumioner sitter interkalert i anoden (grafitt). Stabil lagring i timer til maneder. Selvutladning: 2-5% per maned.</p></div>
+<div class="hw r rd2"><div class="hw__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><h3 class="hw__tt">Utladning</h3><p class="hw__tx">Ioner vandrer tilbake til katoden. Elektroner tar den ytre kretsen &mdash; det er strommen som driver enheten din.</p></div>
+<div class="hw r rd3"><div class="hw__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="8" opacity=".3"/><path d="M12 4v2M12 18v2M4 12h2M18 12h2"/></svg></div><h3 class="hw__tt">Syklusliv</h3><p class="hw__tx">Moderne Li-ion: 500-5000 ladesykluser. LFP-kjemi: 3000+. Degradering skyldes SEI-vekst og litiumtap over tid.</p></div>
+</div></div></section>
+
+<!-- WHAT IS LITHIUM -->
+<section class="sec" id="hva-er"><div class="ctn"><div class="intro">
+<div class="intro__vis r">
+<svg viewBox="0 0 380 340" fill="none">
+<text x="190" y="24" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="11" fill="#6a6580" font-weight="600" letter-spacing=".2em" opacity=".6">LITIUM &mdash; GRUNNSTOFF 3</text>
+<g transform="translate(120,55)">
+<circle cx="70" cy="65" r="16" fill="rgba(0,212,255,.06)" stroke="#00d4ff" stroke-width="2"/>
+<text x="70" y="70" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="13" fill="#00d4ff">3p</text>
+<ellipse cx="70" cy="65" rx="45" ry="16" fill="none" stroke="#9580f0" stroke-width="1" opacity=".4"/>
+<ellipse cx="70" cy="65" rx="65" ry="28" fill="none" stroke="#7b68d6" stroke-width="1" opacity=".25"/>
+<circle cx="115" cy="65" r="4" fill="#00d4ff" opacity=".7"><animate attributeName="opacity" values=".4;1;.4" dur="1.5s" repeatCount="indefinite"/></circle>
+<circle cx="45" cy="50" r="4" fill="#9580f0" opacity=".7"><animate attributeName="opacity" values=".6;1;.6" dur="2s" repeatCount="indefinite"/></circle>
+<circle cx="135" cy="58" r="4" fill="#7b68d6" opacity=".5"><animate attributeName="opacity" values=".3;.8;.3" dur="2.5s" repeatCount="indefinite"/></circle>
+</g>
+<g transform="translate(40,200)">
+<rect x="0" y="0" width="90" height="90" rx="8" fill="rgba(0,212,255,.03)" stroke="rgba(0,212,255,.12)" stroke-width="1"/>
+<text x="45" y="28" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9" fill="#7b68d6">3</text>
+<text x="45" y="58" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="30" fill="#00d4ff" font-weight="800">Li</text>
+<text x="45" y="80" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="9" fill="#6a6580">6.941</text>
+</g>
+<g transform="translate(160,210)">
+<text x="0" y="12" font-family="IBM Plex Mono,monospace" font-size="9" fill="#9580f0">Elektronkonfigurasjon:</text>
+<text x="0" y="30" font-family="IBM Plex Mono,monospace" font-size="9" fill="#7b68d6">[He] 2s1</text>
+<text x="0" y="52" font-family="IBM Plex Mono,monospace" font-size="9" fill="#9580f0">Smeltepunkt:</text>
+<text x="0" y="68" font-family="IBM Plex Mono,monospace" font-size="9" fill="#7b68d6">180.54 &deg;C</text>
+</g></svg>
+</div>
+<div class="intro__bd r rd2">
+<div class="sec__lb">Grunnstoff 3</div>
+<h2 class="sec__hd">Hva er <em>litium?</em></h2>
+<p>Litium er det letteste metallet og det letteste faste grunnstoffet. Med atomnummer 3 og en tetthet pa bare 0.534 g/cm3 flyter det pa vann &mdash; men reagerer voldsomt med det.</p>
+<p>Oppdaget i 1817 av Johan August Arfwedson i mineralet petalitt fra Uto i Sverige. Navnet kommer fra gresk <em>lithos</em> (stein). Det ble forst isolert i ren form av Humphry Davy i 1818.</p>
+<p>I dag er litium grunnstoffet som driver den <strong>elektriske revolusjonen</strong>. Over 80% brukes i batterier for elbiler, mobiler og energilagring. Det kalles ofte &laquo;det hvite gullet&raquo;.</p>
+<div class="cbox"><div class="cbox__ic"><svg viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg></div>
+<div><div class="cbox__lb">Visste du?</div><div class="cbox__tx">Litium ble dannet i Big Bang for 13.8 milliarder ar siden. Det er ett av bare tre grunnstoffer som ble skapt i universets forste minutter, sammen med hydrogen og helium.</div></div></div>
+</div></div></div></section>
+
+<!-- BATTERY TYPES -->
+<section class="sec sec--s" id="batterier"><div class="ctn">
+<div class="sec__top sec__top--c r"><div class="sec__lb">Batteriteknologi</div><h2 class="sec__hd">Litium-ion <em>batterikjemier</em></h2><p class="sec__ds">Ulike katodesammensetninger gir forskjellige egenskaper. Valget avhenger av bruksomradet.</p></div>
+<div class="trow">
+<div class="tc r"><div class="tc__ic tc__ic--a"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8"/></svg></div><h3 class="tc__nm">NMC</h3><div class="tc__fl">Nikkel-Mangan-Kobolt</div><p class="tc__p">Hoy energitetthet (250-300 Wh/kg). Dominerer i premium-elbiler. God balanse mellom ytelse, levetid og energi. Koboltinnhold er utfordring.</p></div>
+<div class="tc r rd1"><div class="tc__ic tc__ic--b"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="4" y="8" width="18" height="10" rx="2"/><path d="M22 12h2M8 8V5M18 8V5"/></svg></div><h3 class="tc__nm">LFP</h3><div class="tc__fl">Litiumjernfosfat</div><p class="tc__p">Lavere energitetthet (160-190 Wh/kg), men overlegen levetid (3000-5000 sykluser). Ingen kobolt. Tryggere kjemi. Vokser raskt i marked.</p></div>
+<div class="tc r rd2"><div class="tc__ic tc__ic--c"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="13" cy="13" r="10"/><path d="M9 13h8M13 9v8"/></svg></div><h3 class="tc__nm">Solid-state</h3><div class="tc__fl">Fast elektrolytt &mdash; neste generasjon</div><p class="tc__p">Erstatter flytende elektrolytt med fast materiale. 2x energitetthet. Eliminerer brannfare. Toyota, Samsung, QuantumScape leder utviklingen. Forventet 2027-2030.</p></div>
+</div></div></section>
+
+<!-- FOREKOMSTER -->
+<section class="sec sec--g" id="forekomster"><div class="ctn">
+<div class="sec__top sec__top--c r"><div class="sec__lb">Globale forekomster</div><h2 class="sec__hd">Hvor finnes <em>litium?</em></h2><p class="sec__ds">Litium utvinnes fra saltsjoer i Sor-Amerika og hardberggruver i Australia. Nye kilder oppdages stadig.</p></div>
+<div class="bwrap" style="grid-template-columns:repeat(2,1fr)">
+<div class="bc r"><div class="bc__ic bc__ic--a"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 20l4-6 4 3 5-8 7 11"/></svg></div><h3 class="bc__tt">Litiumtriangelet</h3><p class="bc__tx">Argentina, Bolivia og Chile har 58% av verdens reserver i enorme salarformasjoner. Utvinning via fordampning av saltlake over 12-18 maneder.</p></div>
+<div class="bc r rd1"><div class="bc__ic bc__ic--b"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M13 3l8 17H5L13 3z"/><circle cx="13" cy="15" r="3"/></svg></div><h3 class="bc__tt">Australia (47%)</h3><p class="bc__tx">Verdens storste produsent. Hardberggruvedrift av spodumen (litiummineral). Greenbushes-gruven er storst. Rask prosessering vs. salar.</p></div>
+<div class="bc r"><div class="bc__ic bc__ic--c"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="13" cy="13" r="10"/><path d="M8 13h10"/></svg></div><h3 class="bc__tt">Kina (15%)</h3><p class="bc__tx">Nest storste produsent og storste raffinerer. Kontrollerer 60%+ av global litiumraffinering. Strategisk dominans i batteriverdikjeden.</p></div>
+<div class="bc r rd1"><div class="bc__ic bc__ic--d"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="13" cy="8" r="5"/><path d="M6 21c0-3 2-6 7-6s7 3 7 6"/></svg></div><h3 class="bc__tt">Nye kilder</h3><p class="bc__tx">Geotermalvann, leirforekomster, gruveavafall og havvann. DLE-teknologi (Direct Lithium Extraction) kan revolusjonere utvinning.</p></div>
+</div></div></section>
+
+<!-- BIG NUMBERS -->
+<div class="bnb"><div class="ctn"><div class="bnb__row r">
+<div class="bn"><div class="bn__n">0.534</div><div class="bn__l">g/cm3 &mdash; lettere enn vann</div></div>
+<div class="bn"><div class="bn__n">80%+</div><div class="bn__l">av litium gar til batterier</div></div>
+<div class="bn"><div class="bn__n">3x</div><div class="bn__l">ettersporselvekst forventet til 2030</div></div>
+<div class="bn"><div class="bn__n">300</div><div class="bn__l">Wh/kg i beste Li-ion-celler</div></div>
+</div></div></div>
+
+<!-- UTVINNING -->
+<section class="sec" id="utvinning"><div class="ctn">
+<div class="sec__top r"><div class="sec__lb">Utvinningsmetoder</div><h2 class="sec__hd">Fra jord til <em>batteri</em></h2><p class="sec__ds">To hovedmetoder dominerer, med en tredje pa vei.</p></div>
+<div class="sgrid">
+<div class="r"><table class="stbl"><thead><tr><th>Metode</th><th>Kilde</th><th>Tid</th><th>Utbredelse</th></tr></thead><tbody>
+<tr><td>Salarfordampning</td><td>Saltlake</td><td>12-18 mnd</td><td><div class="bar"><div class="bar__f" data-w="40"></div></div></td></tr>
+<tr><td>Hardberggruvedrift</td><td>Spodumen</td><td>Dager</td><td><div class="bar"><div class="bar__f" data-w="55"></div></div></td></tr>
+<tr><td>DLE</td><td>Diverse</td><td>Timer</td><td><div class="bar"><div class="bar__f" data-w="5"></div></div></td></tr>
+<tr><td>Leirutvinning</td><td>Hectoritt</td><td>Uker</td><td><div class="bar"><div class="bar__f" data-w="2"></div></div></td></tr>
+</tbody></table></div>
+<div class="ssb r rd2">
+<div class="stip"><div class="stip__ic stip__ic--a"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="10" cy="10" r="7"/><path d="M10 6v4l3 2"/></svg></div><h4 class="stip__tt">DLE-revolusjonen</h4><p class="stip__tx">Direct Lithium Extraction kan utvinne litium pa timer istedenfor maneder. Hoyere utbytte, lavere vannforbruk, mindre areal. Teknologien modnes raskt.</p></div>
+<div class="stip"><div class="stip__ic stip__ic--b"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L3 17h14L10 2z"/><path d="M10 7v4M10 14h.01"/></svg></div><h4 class="stip__tt">Miljoutfordringer</h4><p class="stip__tx">Salarutvinning bruker enorme mengder vann i orkenmiljo. Hardberggruvedrift har stort fotavtrykk. Resirkulering er nodvendig.</p></div>
+</div></div></div></section>
+
+<!-- ELBILER -->
+<section class="sec sec--s" id="elbiler"><div class="ctn">
+<div class="sec__top sec__top--c r"><div class="sec__lb">Elektrifisering</div><h2 class="sec__hd">Litium driver <em>elbil-revolusjonen</em></h2></div>
+<div class="dgrid">
+<div class="dc r"><div class="dc__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="8" width="18" height="8" rx="2"/><path d="M21 12h1.5M7 8V5M17 8V5M7 16v3M17 16v3"/></svg></div><div class="dc__grp">Typisk elbil-batteri</div><div class="dc__age">Litiuminnhold</div><div class="dc__amt">8-12 <span class="dc__u">kg rent litium</span></div><p class="dc__dt">En 75 kWh-batteripakke inneholder 8-12 kg litium. Tesla Model 3 bruker ca. 10 kg. Representerer bare 2-3% av batteriets vekt.</p></div>
+<div class="dc r rd1"><div class="dc__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8"/></svg></div><div class="dc__grp">Energitetthet</div><div class="dc__age">State of the art</div><div class="dc__amt">250-300 <span class="dc__u">Wh/kg</span></div><p class="dc__dt">Moderne NMC-celler. 5x bedre enn bly-syre. Forbedres 5-8% arlig. Mal: 500+ Wh/kg med solid-state.</p></div>
+<div class="dc r"><div class="dc__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div class="dc__grp">Ladetid</div><div class="dc__age">Hurtiglading</div><div class="dc__amt">15-30 <span class="dc__u">min (10-80%)</span></div><p class="dc__dt">800V-arkitektur muliggjor 350 kW lading. 10-80% pa 15-18 min i nyeste modeller. Batteriforvarming er nokkel om vinteren.</p></div>
+<div class="dc r rd1"><div class="dc__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 22s-8-5.5-8-11a5 5 0 0110 0 5 5 0 0110 0c0 5.5-8 11-8 11z"/></svg></div><div class="dc__grp">Levetid</div><div class="dc__age">Garantistandard</div><div class="dc__amt">8 ar <span class="dc__u">/ 160 000 km</span></div><p class="dc__dt">Typisk garanti. Reell levetid ofte 15+ ar. LFP-batterier degraderer saktere. Tesla-data viser 12% tap etter 320 000 km.</p></div>
+</div></div></section>
+
+<!-- RESEARCH -->
+<section class="sec sec--d" id="forskning"><div class="ctn">
+<div class="sec__top sec__top--c r"><div class="sec__lb">Forskning og historie</div><h2 class="sec__hd">Fra mineral til <em>megatrend</em></h2></div>
+<div class="tl">
+<div class="tli r"><div class="tli__y">1817</div><h3 class="tli__tt">Oppdagelsen</h3><p class="tli__tx">Johan August Arfwedson oppdager litium i mineralet petalitt fra Uto gruva i Sverige. Forste alkalimetallet funnet i mineral (ikke planteaske).</p></div>
+<div class="tli r"><div class="tli__y">1949</div><h3 class="tli__tt">Psykiatrisk medisin</h3><p class="tli__tx">John Cade oppdager litiums stemningsstabiliserende effekt. Revolusjonerer behandling av bipolar lidelse. Fortsatt forstelinjebehandling.</p></div>
+<div class="tli r"><div class="tli__y">1970-tallet</div><h3 class="tli__tt">Forste litiumbatterier</h3><p class="tli__tx">M. Stanley Whittingham utvikler forste konseptet for litium-ion-batteri. Grunnleggende forskning pa litiuminnsetting i krystallstrukturer.</p></div>
+<div class="tli r"><div class="tli__y">1980</div><h3 class="tli__tt">Goodenoughs gjennombrudd</h3><p class="tli__tx">John B. Goodenough oppdager litiumkoboltoksid (LiCoO2) som katode. Dobler spenningen. Grunnlaget for alle moderne litium-ion-batterier.</p></div>
+<div class="tli r"><div class="tli__y">1991</div><h3 class="tli__tt">Kommersiell Li-ion</h3><p class="tli__tx">Sony lanserer verdens forste kommersielle litium-ion-batteri. Revolusjonerer beerbar elektronikk. Starter en ny ara.</p></div>
+<div class="tli r"><div class="tli__y">2019</div><h3 class="tli__tt">Nobelprisen</h3><p class="tli__tx">Goodenough, Whittingham og Yoshino mottar Nobelprisen i kjemi for utviklingen av litium-ion-batteriet. Goodenough er 97 ar &mdash; eldste nobelprisvinner.</p></div>
+<div class="tli r"><div class="tli__y">2025+</div><h3 class="tli__tt">Solid-state og resirkulering</h3><p class="tli__tx">Solid-state-batterier narmer seg kommersialisering. Resirkuleringsindustrien skalerer opp. Natrium-ion utfordrer litium i lavpris-segmentet.</p></div>
+</div></div></section>
+
+<!-- MYTHS -->
+<section class="sec" id="myter"><div class="ctn">
+<div class="sec__top sec__top--c r"><div class="sec__lb">Fakta vs. fiksjon</div><h2 class="sec__hd">Vanlige myter om <em>litium</em></h2></div>
+<div class="mlist">
+<div class="mi r"><button class="mi__tg" onclick="tM(this)"><span class="mi__bd">Myte</span><span class="mi__q">Litium-batterier eksploderer ofte</span><svg class="mi__ch" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5 8 10 13 15 8"/></svg></button><div class="mi__an"><div class="mi__ai"><span class="mi__fb">Fakta</span><p class="mi__at">Thermal runaway er sjeldent. Moderne BMS (Battery Management System) overvaker hver celle. Risikoen er lavere enn bensinbiler per kilometer kjort. LFP-kjemi er spesielt trygg.</p></div></div></div>
+<div class="mi r"><button class="mi__tg" onclick="tM(this)"><span class="mi__bd">Myte</span><span class="mi__q">Det finnes ikke nok litium til alle elbiler</span><svg class="mi__ch" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5 8 10 13 15 8"/></svg></button><div class="mi__an"><div class="mi__ai"><span class="mi__fb">Fakta</span><p class="mi__at">Globale reserver: 130 millioner tonn. Arlig forbruk: ~130 000 tonn. Nye forekomster oppdages stadig. Resirkulering vil redusere behovet. Natrium-ion tar over i lavpris-segmentet.</p></div></div></div>
+<div class="mi r"><button class="mi__tg" onclick="tM(this)"><span class="mi__bd">Myte</span><span class="mi__q">Litiumgruvedrift er verre for miljoet enn fossil energi</span><svg class="mi__ch" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5 8 10 13 15 8"/></svg></button><div class="mi__an"><div class="mi__ai"><span class="mi__fb">Nyansert</span><p class="mi__at">Gruvedrift har miljopåvirkning, spesielt vannforbruk i salarer. Men livssyklusanalyser viser at elbiler med Li-ion har 50-70% lavere CO2-avtrykk enn fossilbiler over levetiden.</p></div></div></div>
+<div class="mi r"><button class="mi__tg" onclick="tM(this)"><span class="mi__bd">Myte</span><span class="mi__q">Elbil-batterier kan ikke resirkuleres</span><svg class="mi__ch" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5 8 10 13 15 8"/></svg></button><div class="mi__an"><div class="mi__ai"><span class="mi__fb">Fakta</span><p class="mi__at">95%+ av litium, kobolt og nikkel kan gjenvinnes. Hydrometallurgiske prosesser er modne. EU krever 70% resirkulering fra 2030. Redwood Materials og Li-Cycle leder an.</p></div></div></div>
+</div></div></section>
+
+<!-- FAQ -->
+<section class="sec sec--s" id="faq"><div class="ctn">
+<div class="sec__top sec__top--c r"><div class="sec__lb">Ofte stilte sporsmal</div><h2 class="sec__hd">Sporsmal og <em>svar</em></h2></div>
+<div class="fgrid">
+<div class="fq r"><h3 class="fq__q">Hva brukes litium til?</h3><p class="fq__a">80%+ til batterier (elbiler, elektronikk, energilagring). Resten: keramikk, glass, smoreolje, medisin (bipolar lidelse) og metallurgi.</p></div>
+<div class="fq r rd1"><h3 class="fq__q">Er litium sjeldent?</h3><p class="fq__a">Nei. 20 ppm i jordskorpen. Reserver: 130 Mt. Finnes i bergarter, saltlake, leirforekomster og havvann. Utfordringen er utvinningskostnad, ikke mengde.</p></div>
+<div class="fq r"><h3 class="fq__q">Hva er forskjellen pa Li-ion og LFP?</h3><p class="fq__a">Li-ion er paraplybetegnelsen. LFP (litiumjernfosfat) er en spesifikk katodekjemi innenfor Li-ion: tryggere, lengre levetid, men lavere energitetthet enn NMC.</p></div>
+<div class="fq r rd1"><h3 class="fq__q">Kan natrium erstatte litium?</h3><p class="fq__a">Delvis. Na-ion-batterier er billigere og bruker vanlige materialer. Lavere energitetthet gjor dem best for stasjonaer lagring og budget-elbiler, ikke premium-segmentet.</p></div>
+<div class="fq r"><h3 class="fq__q">Har Norge litium?</h3><p class="fq__a">Ja. Forekomster er kartlagt i Kautokeino, Tysfjord og flere steder. Ingen kommersiell utvinning enna. Debatt om gruvedrift pagar.</p></div>
+<div class="fq r rd1"><h3 class="fq__q">Hva er litiumkarbonat?</h3><p class="fq__a">Li2CO3 &mdash; den vanligste handelsformen. Prisen svinger kraftig: fra $6000/tonn i 2020 til $80 000 i 2022, tilbake til ~$10 000 i 2024.</p></div>
+<div class="fq r"><h3 class="fq__q">Er litium radioaktivt?</h3><p class="fq__a">Nei. Litium er stabilt og ikke radioaktivt. Det er et alkalimetall som reagerer med vann og luft, men avgir ingen straling.</p></div>
+<div class="fq r rd1"><h3 class="fq__q">Hva er solid-state-batterier?</h3><p class="fq__a">Neste generasjon. Erstatter flytende elektrolytt med fast materiale. 2x energitetthet, raskere lading, ingen brannfare. Forventet kommersialisert 2027-2030.</p></div>
+</div></div></section>
+
+<!-- CTA -->
+<section style="text-align:center;padding:clamp(5rem,10vw,9rem) 0;background:var(--d);position:relative;overflow:hidden"><div style="position:absolute;inset:0;background:radial-gradient(ellipse 40% 40% at 50% 50%,rgba(0,212,255,.04),transparent)"></div><div class="ctn" style="position:relative"><div class="r">
+<h2 style="font-family:var(--fh);font-weight:800;font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.03em;color:#fff;margin-bottom:1rem">Fremtidens energi. Dagens kunnskap.</h2>
+<p style="font-family:var(--fd);font-size:1.05rem;color:var(--tw6);max-width:520px;margin:0 auto 2.5rem;font-style:italic;line-height:1.8">Lithium.no er en uavhengig, evidensbasert kunnskapsplattform &mdash; et prosjekt fra IT-FIRMA.</p>
+<a href="#topp" class="btn btn--c">Tilbake til toppen <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 13V3M4 7l4-4 4 4"/></svg></a>
+</div></div></section>
+
+<!-- FOOTER -->
+<footer class="ft"><div class="ft__glow"></div><div class="ctn">
+<div class="ft__top">
+<div class="ft__brand"><div style="display:flex;align-items:center;gap:.6rem;margin-bottom:1rem"><div class="nav__lm"><svg viewBox="0 0 20 20" fill="none" stroke="#08060e" stroke-width="1.5" stroke-linecap="round"><rect x="5" y="7" width="10" height="6" rx="1"/><path d="M15 9h1.5v2H15M7 7V5M13 7V5"/></svg></div><span style="font-weight:700;font-size:1.2rem;color:#fff">Lithium.no</span></div>
+<p class="ft__bt">Norges mest omfattende kunnskapsbase om litium, batteriteknologi og den elektriske revolusjonen.</p>
+<a href="https://it-firma.no" target="_blank" rel="noopener" class="ft__itfirma"><div><div class="ft__itfirma-badge">Et prosjekt av</div><div class="ft__itfirma-name">IT-FIRMA</div></div><svg class="ft__itfirma-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+<div class="ft__c"><h4>Kunnskap</h4><a href="/egenskaper"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>Egenskaper</a><a href="/batterier"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>Batteriteknologi</a><a href="/forekomster"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>Forekomster</a><a href="/utvinning"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>Utvinning</a></div>
+<div class="ft__c"><h4>Guider</h4><a href="/elbiler"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>Elbiler</a><a href="/medisin"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>Medisinsk bruk</a><a href="/helse-miljo"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>Helse og miljo</a><a href="/norsk-lithium"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>Norsk litium</a></div>
+<div class="ft__c"><h4>Ressurser</h4><a href="/forskning"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>Forskning</a><a href="/om-oss"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>Om oss</a><a href="/personvern"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>Personvern</a><a href="https://it-firma.no" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>IT-FIRMA.no</a><a href="https://omega-3.no" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>Omega-3.no</a><a href="https://vitamind.no" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>VitaminD.no</a></div>
+</div>
+<div class="ft__mid">
+<div class="ft__badge"><div class="ft__badge-ic ft__badge-ic--a"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M10 2l2.5 4H17l-3.5 3L15 14l-5-3-5 3 1.5-5L3 6h4.5z"/></svg></div><div class="ft__badge-tx"><strong>Evidensbasert</strong>Kvalitetssikret innhold</div></div>
+<div class="ft__badge"><div class="ft__badge-ic ft__badge-ic--b"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="10" cy="10" r="7"/><path d="M10 6v4l3 2"/></svg></div><div class="ft__badge-tx"><strong>Uavhengig</strong>Ingen kommersielle bindinger</div></div>
+<div class="ft__badge"><div class="ft__badge-ic ft__badge-ic--c"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 2v16"/><path d="M4 3h10l-2 4 2 4H4"/></svg></div><div class="ft__badge-tx"><strong>Norsk</strong>Laget i Norge av IT-FIRMA</div></div>
+</div>
+<div class="ft__bot"><div class="ft__cp">&copy; 2026 Lithium.no &mdash; Utviklet av <a href="https://it-firma.no" target="_blank" rel="noopener">IT-FIRMA</a></div><div class="ft__dis">Informasjonen er kun til opplaeringsforsal og erstatter ikke profesjonell radgivning.</div></div>
+</div></footer>
+
+<button class="btt" id="btt" aria-label="Til toppen"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M8 13V3M4 7l4-4 4 4"/></svg></button>
+
+<script>
+const nav=document.getElementById('nav'),btt=document.getElementById('btt');
+window.addEventListener('scroll',()=>{nav.classList.toggle('s',scrollY>60);btt.classList.toggle('vi',scrollY>500)});
+btt.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
+const hb=document.getElementById('hb'),nk=document.getElementById('nk');
+hb.addEventListener('click',()=>{hb.classList.toggle('o');nk.classList.toggle('op')});
+nk.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nk.classList.remove('op');hb.classList.remove('o')}));
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('v');obs.unobserve(x.target)}})},{threshold:.06,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.r').forEach(el=>obs.observe(el));
+const bobs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.style.width=x.target.dataset.w+'%';bobs.unobserve(x.target)}})},{threshold:.2});
+document.querySelectorAll('.bar__f').forEach(b=>bobs.observe(b));
+function tM(b){const m=b.closest('.mi'),o=m.classList.contains('o');document.querySelectorAll('.mi').forEach(x=>x.classList.remove('o'));if(!o)m.classList.add('o')}
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t)scrollTo({top:t.getBoundingClientRect().top+scrollY-80,behavior:'smooth'})})});
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Lithium.no","url":"https://lithium.no","description":"Norges storste kunnskapsbase om litium og batteriteknologi.","inLanguage":"nb-NO"}</script>
+</body></html>
