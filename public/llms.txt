@@ -1,0 +1,27 @@
+# Lithium.no
+
+> Norges uavhengige kunnskapsbase om litium-batterier, kjemi, sikkerhet og marked. Litium-ion, LFP, NMC, LTO, solid-state, levetid, brann og resirkulering – uten salgsspråk.
+
+## Om
+
+Lithium.no er en redaksjonell ressurs for nordmenn som vil forstå litium-batterier teknisk. Innholdet dekker kjemi, bruksområder (elbil, båt, hjem, off-grid), sikkerhet og det globale litium-markedet. Uavhengig av leverandører, med realistiske intervaller fremfor markedsføringsspråk.
+
+## Hovedtemaer
+
+- **Kjemi:** LFP, NMC, LTO, NCA, solid-state. LFP dominerer i hjemmebatteri og økende i elbil. NMC fortsatt vanlig i elbil.
+- **Levetid:** LFP 4 000–6 000 sykluser (12–15 år), NMC 1 500–3 000 sykluser (8–10 år).
+- **Sikkerhet:** Termisk runaway er hovedrisiko. LFP klart sikrere enn NMC. BMS er kritisk.
+- **Marked:** Litiumkarbonat 90 000–120 000 kr/tonn (2026). Australia leder råstoff, Kina dominerer raffinering.
+- **Norske aktører:** Vianode, Beyonder, Morrow Batteries.
+
+## Hovedsider
+
+- /teknologi – Komplett oversikt over litium-teknologi
+- /lfp-vs-nmc – Sammenligning av de to viktigste kjemiene
+- /sikkerhet – Risiko, brann, lagring og transport
+- /marked – Pris, råvarer og industri
+- /kalkulator – Beregn litium-batteri til ditt formål
+
+## Bruk
+
+Innholdet er fritt tilgjengelig. Sitater er velkomne med tilbakelenke til lithium.no.
